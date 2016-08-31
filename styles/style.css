@@ -376,9 +376,13 @@ main {
         padding: 10px;
         width: 100%; } }
 
-.infoWindow > div .clientDog img {
-  margin: 0 auto;
-  display: block; }
+.infoWindow > div .clientDog {
+  width: 40px;
+  margin: 0 auto 10px auto; }
+  .infoWindow > div .clientDog > svg {
+    position: static; }
+    .infoWindow > div .clientDog > svg path {
+      fill: #513531; }
 
 .infoWindow > div .shelterInfo {
   margin-top: 15px;

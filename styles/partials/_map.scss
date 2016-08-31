@@ -208,9 +208,16 @@ main {
 }
 
 .infoWindow > div {
-    .clientDog img {
-        margin: 0 auto;
-        display: block;
+    .clientDog {
+        width: 40px;
+        margin: 0 auto 10px auto;
+
+        > svg {
+            position: static;
+            path {
+                fill: $rock;
+            }
+        }
     }
 
     .shelterInfo {
