@@ -207,14 +207,47 @@ main {
     }
 }
 
+ .leaflet-popup-tip,
+ .leaflet-popup-content-wrapper  {
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .infoWindow > div {
     .clientDog {
+<<<<<<< HEAD
         width: 40px;
         margin: 0 auto 10px auto;
 
         > svg {
             position: static;
             path {
+=======
+        margin: 0 auto;
+        display: block;
+        width: 50px;
+
+        > svg {
+            position: static;
+
+            #head {
+                /*-webkit-animation-duration: 3s;*/
+                -webkit-animation-delay: 1s;
+                -webkit-animation-iteration-count: 2;
+            }
+
+            #bark {
+                -webkit-animation-delay: 3s;
+                -webkit-animation-iteration-count: 2;
+            }
+
+            > path {
+>>>>>>> master
                 fill: $rock;
             }
         }

@@ -376,12 +376,38 @@ main {
         padding: 10px;
         width: 100%; } }
 
+<<<<<<< HEAD
 .infoWindow > div .clientDog {
   width: 40px;
   margin: 0 auto 10px auto; }
   .infoWindow > div .clientDog > svg {
     position: static; }
     .infoWindow > div .clientDog > svg path {
+=======
+.leaflet-popup-tip,
+.leaflet-popup-content-wrapper {
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.8; }
+  .leaflet-popup-tip:hover,
+  .leaflet-popup-content-wrapper:hover {
+    opacity: 1; }
+
+.infoWindow > div .clientDog {
+  margin: 0 auto;
+  display: block;
+  width: 50px; }
+  .infoWindow > div .clientDog > svg {
+    position: static; }
+    .infoWindow > div .clientDog > svg #head {
+      /*-webkit-animation-duration: 3s;*/
+      -webkit-animation-delay: 1s;
+      -webkit-animation-iteration-count: 2; }
+    .infoWindow > div .clientDog > svg #bark {
+      -webkit-animation-delay: 3s;
+      -webkit-animation-iteration-count: 2; }
+    .infoWindow > div .clientDog > svg > path {
+>>>>>>> master
       fill: #513531; }
 
 .infoWindow > div .shelterInfo {
@@ -417,6 +443,8 @@ fieldset {
       display: block;
       margin: 0 auto;
       cursor: pointer; }
+    .flickityWrapper .closeFlickity.hide {
+      display: none; }
   .flickityWrapper .flickity-container {
     width: 100%;
     height: 100vh;
