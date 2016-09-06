@@ -27,6 +27,10 @@
         	margin: 0 auto;
         	cursor: pointer;
         }
+
+		&.hide {
+			display: none;
+		}
     }
     .flickity-container {
         width: 100%;

@@ -83,7 +83,7 @@ petApp.init = () => {
 
 		/* Note: here are three very similar things. write a
 		generic fucntion to store them*/
-		
+
 		const checkedInputsAge = $('input[name=age]:checked');
 		const checkedValuesAge = checkedInputsAge.map(function(index, input) {
 			return $(input).val();
@@ -211,7 +211,9 @@ petApp.displayShelter = (shelters) => {
 				$(".flickity-container").flickity("destroy");
 				$(".flickity-container").addClass("hide");
 				$(this).addClass("hide");
+				$('.closeFlickity').addClass('hide');
 			}
+			
 			petApp.shelterWithPets.forEach(shelter => {
 				if ($.isEmptyObject(shelter.finalpet3)){
 					shelter.pet.forEach(pup => {

@@ -376,6 +376,15 @@ main {
         padding: 10px;
         width: 100%; } }
 
+.leaflet-popup-tip,
+.leaflet-popup-content-wrapper {
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.8; }
+  .leaflet-popup-tip:hover,
+  .leaflet-popup-content-wrapper:hover {
+    opacity: 1; }
+
 .infoWindow > div .clientDog {
   margin: 0 auto;
   display: block;
@@ -425,6 +434,8 @@ fieldset {
       display: block;
       margin: 0 auto;
       cursor: pointer; }
+    .flickityWrapper .closeFlickity.hide {
+      display: none; }
   .flickityWrapper .flickity-container {
     width: 100%;
     height: 100vh;

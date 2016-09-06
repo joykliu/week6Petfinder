@@ -207,6 +207,17 @@ main {
     }
 }
 
+ .leaflet-popup-tip,
+ .leaflet-popup-content-wrapper  {
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .infoWindow > div {
     .clientDog {
         margin: 0 auto;
