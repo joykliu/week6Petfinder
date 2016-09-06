@@ -6,6 +6,10 @@ footer {
 			text-align: center;
 			padding: 10px;
 			color: $rock;
+
+			a {
+				text-decoration: underline;
+			}
 		}
 	}
 }

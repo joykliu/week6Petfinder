@@ -380,7 +380,7 @@ main {
 .leaflet-popup-content-wrapper {
   cursor: pointer;
   transition: 0.3s;
-  opacity: 0.8; }
+  opacity: 0.9; }
   .leaflet-popup-tip:hover,
   .leaflet-popup-content-wrapper:hover {
     opacity: 1; }
@@ -535,6 +535,8 @@ footer > .wrapper {
     text-align: center;
     padding: 10px;
     color: #513531; }
+    footer > .wrapper p a {
+      text-decoration: underline; }
 
 /*!
  * animate.css -http://daneden.me/animate
