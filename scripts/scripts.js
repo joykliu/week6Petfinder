@@ -56,7 +56,7 @@ petApp.init = () => {
 						return shelterObj.pet.length > 0;
 					});// /.filter
 				}//.petsInShelter();
-				if (petApp.mymap === undefined) {
+				if (!petApp.mymap) {
 					petApp.initMap();
 					$("main").removeClass("hide");
 					$("footer").removeClass("hide");
@@ -84,22 +84,18 @@ petApp.init = () => {
 		/* Note: here are three very similar things. write a
 		generic fucntion to store them*/
 
-		const checkedInputsAge = $('input[name=age]:checked');
-		const checkedValuesAge = checkedInputsAge.map(function(index, input) {
-			return $(input).val();
-		}).toArray();
+		function getInputAndValue(param) {
+			return $(`input[name=${param}]:checked`).map((input, value) => {
+				return $(value).val();
+			}).toArray();
+		};
+
+		const checkedValuesAge = getInputAndValue('age');
+		const checkedValuesSize = getInputAndValue('size');
+		const checkedValuesSex = getInputAndValue('sex');
+
 		const checkedValuesAgeDefault = ["Baby", "Young", "Adult", "Senior"];
-
-		const checkedInputsSize = $('input[name=size]:checked');
-		const checkedValuesSize = checkedInputsSize.map(function(index, input) {
-			return $(input).val();
-		}).toArray();
 		const checkedValuesSizeDefault = ["S", "M", "L", "XL"];
-
-		const checkedInputsSex = $('input[name=sex]:checked');
-		const checkedValuesSex = checkedInputsSex.map(function(index, input) {
-			return $(input).val();
-		}).toArray();
 		const checkedValuesSexDefault = ["F", "M"];
 
 		petApp.mymap.removeLayer(petApp.markerGroup);
@@ -213,7 +209,7 @@ petApp.displayShelter = (shelters) => {
 				$(this).addClass("hide");
 				$('.closeFlickity').addClass('hide');
 			}
-			
+
 			petApp.shelterWithPets.forEach(shelter => {
 				if ($.isEmptyObject(shelter.finalpet3)){
 					shelter.pet.forEach(pup => {
