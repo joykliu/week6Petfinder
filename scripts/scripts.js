@@ -94,10 +94,7 @@ petApp.init = () => {
 		const checkedValuesSize = getInputAndValue('size');
 		const checkedValuesSex = getInputAndValue('sex');
 
-
 		const checkedValuesAgeDefault = ["Baby", "Young", "Adult", "Senior"];
-
-
 		const checkedValuesSizeDefault = ["S", "M", "L", "XL"];
 		const checkedValuesSexDefault = ["F", "M"];
 
