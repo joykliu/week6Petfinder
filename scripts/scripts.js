@@ -89,7 +89,6 @@ petApp.init = () => {
 				return $(value).val();
 			}).toArray();
 		};
-
 		const checkedValuesAge = getInputAndValue('age');
 		const checkedValuesSize = getInputAndValue('size');
 		const checkedValuesSex = getInputAndValue('sex');
